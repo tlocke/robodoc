@@ -5,8 +5,8 @@ Finding where proprietary file formats are used on UK government websites.
 
 ## Introduction
 
-In 2014 the UK government [announced that open standards would be used for
-sharing government documents](https://www.gov.uk/government/news/open-document-formats-selected-to-meet-user-needs).
+In 2014 the UK government [announced](https://www.gov.uk/government/news/open-document-formats-selected-to-meet-user-needs) that open standards would be used
+for sharing government documents.
 
 In particular, PDF or HTML formats are to be used for viewing government
 documents and the Open Document Format (ODF) is to be used for sharing or
