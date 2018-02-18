@@ -25,11 +25,13 @@ class QuotesSpider(CrawlSpider):
                 extension = parts[-1]
                 if extension in ('xls', 'xslx', 'doc', 'docx'):
                     problems[href] = OrderedDict(
-                        document_url=urljoin(response.url, href),
-                        file_extension=extension,
-                        link_url=response.url,
-                        crawl_timestamp=Datetime.utcnow().strftime(
-                            "%Y-%m-%d %H:%M"))
+                        (
+                            ('document_url', urljoin(response.url, href)),
+                            ('file_extension', extension),
+                            ('link_url', response.url),
+                            (
+                                'crawl_timestamp',
+                                Datetime.utcnow().strftime("%Y-%m-%d %H:%M"))))
 
         # print("problems", problems, file=sys.stderr)
         for problem in problems.values():
