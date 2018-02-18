@@ -10,7 +10,7 @@ class QuotesSpider(CrawlSpider):
     allowed_domains = ['www.gov.uk']
     start_urls = ['https://www.gov.uk/']
     custom_settings = {
-        'CLOSESPIDER_PAGECOUNT': 1000}
+        'CLOSESPIDER_PAGECOUNT': 10000}
     rules = (
         Rule(
             LinkExtractor(allow=(r'.*', )),
@@ -25,9 +25,9 @@ class QuotesSpider(CrawlSpider):
                 extension = parts[-1]
                 if extension in ('xls', 'xslx', 'doc', 'docx'):
                     problems[href] = OrderedDict(
-                        link_url=response.url,
-                        file_extension=extension,
                         document_url=urljoin(response.url, href),
+                        file_extension=extension,
+                        link_url=response.url,
                         crawl_timestamp=Datetime.utcnow().strftime(
                             "%Y-%m-%d %H:%M"))
 
