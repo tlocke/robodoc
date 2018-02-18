@@ -22,7 +22,7 @@ that are still published in a proprietary format.
 
 Here is the CSV of the first run of the RoboDoc crawler:
 
-* [problems\_2018-02-19]()
+* [problems\_2018-02-19.csv](https://tlocke.github.io/robodoc/problems_2018-02-19.csv)
 
 The run was performed on 10,000 pages of `http://www.gov.uk/`. It lists all
 files on the site that end in either '.xls', '.xlsx', '.doc' or '.docx'. The
