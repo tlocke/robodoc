@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      RoboDoc: Finding documents that use proprietary formats on UK government
+      websites
+    </title>
+  </head>
+  <body>
+    <h1>RoboDoc</h1>
+
+    <p>
+      Finding where proprietary file formats are used on UK government
+      websites.
+    <p>
+
+
+    <h2>Introduction</h2>
+
+    <p>
+      In 2014 the UK government
+      <a href="https://www.gov.uk/government/news/open-document-formats-selected-to-meet-user-needs">announced</a> that open standards would be used for
+      sharing government documents.
+    </p>
+
+    <p>
+      In particular, PDF or HTML formats are to be used for viewing government
+      documents and the Open Document Format (ODF) is to be used for sharing or
+      collaborating on government documents.
+    </p>
+
+    <p>
+      Unfortunately, not all files on UK government websites are published in
+      an open format yet, some are still published in a proprietary format. The
+      RoboDoc project aims to crawl the UK government websites and make a list
+      of documents that are still published in a proprietary format.
+    </p>
+
+
+    <h2>List Of Proprietary Files</h2>
+
+    <p>
+      Here is the CSV of the first run of the RoboDoc crawler:
+
+      <ul>
+        <li>
+          <a href="problems_2018-02-19.csv">problems_2018-02-19.csv</a>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      The run was performed on 10,000 pages of
+      <a href="http://www.gov.uk/">http://www.gov.uk/</a>. It lists all files
+      on the site that end in either <code>.xls</code>, <code>.xlsx</code>,
+      <code>.doc</code> or <code>.docx</code>. The titles of the CSV are:
+
+      <ul>
+        <li>
+          <code>document_url</code>: The URL of the document in a proprietary
+          format.
+        </li>
+        <li>
+          <code>file_extension</code>
+        </li>
+        <li>
+          <code>link_url</code>: The page that the link to the document is on.
+        </li>
+        <li>
+          <code>crawl_timestamp</code>: The point in time when the document was
+          found.
+        </li>
+      </ul>
+
+    <p>
+      The CSV file is licensed under a
+      <a
+         href="http://creativecommons.org/licenses/by/4.0/"
+         >Creative Commons Attribution 4.0 International License</a>.
+    </p>
+
+
+    <h2>Why Open Standards?</h2>
+
+    <p>
+      If a document is written in an open format, anyone can freely write
+      editing and viewing software for the format. This means that users aren't
+      beholden to a single vendor of software. In contrast, if a document is
+      written in a proprietary format, then the user can be locked-in to using
+      software from a single vendor.
+    </p>
+
+    <p>
+      For example, web pages are written in the open format HTML, which means
+      there's a good choice of web browser (eg. Microsoft Internet Explorer,
+      Mozilla Firefox, Apple Safari or Google Chrome).
+    <p>
+
+    <p>
+      A WikiBook on open standards has been written which includes a section on
+      the <a href="https://en.wikibooks.org/wiki/FOSS_Open_Standards/Importance_and_Benefits_of_Open_Standards">benefits of open standards</a>.
+    </p>
+
+
+    <h2>Contributing</h2>
+
+    <p>
+      The RoboDoc code is on GitHub at
+      <a
+         href="https://github.com/tlocke/robodoc"
+         >https://github.com/tlocke/robodoc</a>. Suggestions, contributions or
+      bug reports are very welcome. Please open a
+      <a href="https://github.com/tlocke/robodoc/issues">new issue</a> on
+      GitHub.
+    </p>
+
+
+    <h2>Installing and running the RoboDoc software</h2>
+
+    <ul>
+      <li>
+        Make sure [Python 3](https://www.python.org/) is installed.
+      </li>
+      <li>
+        Make sure
+        <a href="https://doc.scrapy.org/en/latest/intro/install.html">Scrapy is
+        installed</a>.
+      </li>
+      <li>
+        Create a virtual environment:
+        <code>virtualenv --python=python3 venv</code>
+      </li>
+      <li>
+        Activate virtual environment: <code>source venv/bin/activate</code>
+      </li>
+      <li>
+        Install via git:
+        <code>pip install -e git+https://github.com/tlocke/robodoc.git</code>
+      </li>
+      <li>
+        Run with: <code>./run.sh</code>
+      </li>
+    </ul>
+  </body>
+</html>
