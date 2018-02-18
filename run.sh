@@ -1,1 +1,1 @@
-scrapy runspider robodoc/robodoc.py -t json -o - > violations.json
+scrapy runspider robodoc/robodoc.py -t csv -o - > problems.csv
