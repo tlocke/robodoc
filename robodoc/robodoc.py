@@ -5,12 +5,12 @@ from urllib.parse import urljoin
 from collections import OrderedDict
 
 
-class QuotesSpider(CrawlSpider):
+class FormatSpider(CrawlSpider):
     name = "RoboDoc"
     allowed_domains = ['www.gov.uk']
     start_urls = ['https://www.gov.uk/']
     custom_settings = {
-        'CLOSESPIDER_PAGECOUNT': 10000}
+        'CLOSESPIDER_PAGECOUNT': 20000}
     rules = (
         Rule(
             LinkExtractor(allow=(r'.*', )),
@@ -23,7 +23,7 @@ class QuotesSpider(CrawlSpider):
             parts = href.split('.')
             if len(parts) > 1:
                 extension = parts[-1]
-                if extension in ('xls', 'xslx', 'doc', 'docx'):
+                if extension in ('xls', 'xlsx', 'doc', 'docx'):
                     problems[href] = OrderedDict(
                         (
                             ('document_url', urljoin(response.url, href)),

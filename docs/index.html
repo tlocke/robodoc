@@ -38,44 +38,66 @@
     </p>
 
 
-    <h2>List Of Proprietary Files</h2>
+    <h2>List Of Offending Files</h2>
 
     <p>
-      Here is the CSV of the first run of the RoboDoc crawler:
+      Here are CSVs of the latest runs of the RoboDoc crawler:
     </p>
 
-    <ul>
-      <li>
+    <dl>
+      <dt>
         <a href="https://bitbucket.org/tlocke/rd_downloads/downloads/problems_2018-02-19.csv">problems_2018-02-19.csv</a>
-      </li>
-    </ul>
+      </dt>
+      <dd>
+        The run was performed on 20,000 pages of
+        <a href="http://www.gov.uk/">http://www.gov.uk/</a>. It lists 2342
+        files on the site that end in either <code>.xls</code>,
+        <code>.xlsx</code>, <code>.doc</code> or <code>.docx</code>. The titles
+        of the CSV are:
+        <ul>
+          <li>
+            <code>document_url</code>: The URL of the offending document.
+          </li>
+          <li>
+            <code>file_extension</code>
+          </li>
+          <li>
+            <code>link_url</code>: The page that the link to the document is on.
+          </li>
+          <li>
+            <code>crawl_timestamp</code>: The point in time when the document
+            was found.
+          </li>
+        </ul>
+      </dd>
+      <dt>
+        <a href="https://bitbucket.org/tlocke/rd_downloads/downloads/problems_2018-02-18.csv">problems_2018-02-18.csv</a>
+      </dt>
+      <dd>
+        The run was performed on 10,000 pages of
+        <a href="http://www.gov.uk/">http://www.gov.uk/</a>. It lists all files
+        on the site that end in either <code>.xls</code>, <code>.xlsx</code>,
+        <code>.doc</code> or <code>.docx</code>. The titles of the CSV are:
+        <ul>
+          <li>
+            <code>document_url</code>: The URL of the offending document.
+          </li>
+          <li>
+            <code>file_extension</code>
+          </li>
+          <li>
+            <code>link_url</code>: The page that the link to the document is on.
+          </li>
+          <li>
+            <code>crawl_timestamp</code>: The point in time when the document
+            was found.
+          </li>
+        </ul>
+      </dd>
+    </dl>
 
     <p>
-      The run was performed on 10,000 pages of
-      <a href="http://www.gov.uk/">http://www.gov.uk/</a>. It lists all files
-      on the site that end in either <code>.xls</code>, <code>.xlsx</code>,
-      <code>.doc</code> or <code>.docx</code>. The titles of the CSV are:
-    </p>
-
-    <ul>
-      <li>
-        <code>document_url</code>: The URL of the document in a proprietary
-        format.
-      </li>
-      <li>
-        <code>file_extension</code>
-      </li>
-      <li>
-        <code>link_url</code>: The page that the link to the document is on.
-      </li>
-      <li>
-        <code>crawl_timestamp</code>: The point in time when the document was
-        found.
-      </li>
-    </ul>
-
-    <p>
-      The CSV file is licensed under a
+      The CSVs file is licensed under a
       <a
          href="http://creativecommons.org/licenses/by/4.0/"
          >Creative Commons Attribution 4.0 International License</a>.

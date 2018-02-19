@@ -6,7 +6,8 @@ UK government websites and make a list of documents that have proprietary file
 formats.
 
 Suggestions, contributions or bug reports are very welcome. Please open a new
-issue on GitHub.
+issue on GitHub or send a pull request.
+
 
 ## Installing and running the RoboDoc software
 
@@ -17,3 +18,8 @@ issue on GitHub.
 * Activate virtual environment: `source venv/bin/activate`
 * Install via git: `pip install -e git+https://github.com/tlocke/robodoc.git`
 * Run with: `./run.sh`
+
+## Running Tests
+
+* Install pytest: `pip install pytest`
+* Run the tests: `pytest test_robodoc.py`
