@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <title>
-      RoboDoc: Finding documents that use proprietary formats on UK government
-      websites
+      RoboDoc: Monitoring UK government websites for their use of open and
+      proprietary document formats.
     </title>
     <meta charset="utf-8">
   </head>
@@ -11,8 +11,8 @@
     <h1>RoboDoc</h1>
 
     <p>
-      Finding where proprietary file formats are used on UK government
-      websites.
+      Monitoring UK government websites for their use of open and proprietary
+      document formats.
     </p>
 
 
@@ -26,25 +26,63 @@
 
     <p>
       In particular, PDF or HTML formats are to be used for viewing government
-      documents and the Open Document Format (ODF) is to be used for sharing or
-      collaborating on government documents.
+      documents and the Open Document Format (ODF) is to be used for editable
+      documents.
     </p>
 
     <p>
       Unfortunately, not all files on UK government websites are published in
       an open format yet, some are still published in a proprietary format. The
-      RoboDoc project aims to crawl the UK government websites and make a list
-      of documents that are still published in a proprietary format.
+      RoboDoc project focuses on editable documents that should be in the open
+      format called ODF. It aims to crawl the UK government websites and make a
+      list of editable documents and record whether they are in an open or
+      proprietary format. Files in the ODF format end in <code>odt</code>,
+      <code>ods</code> or <code>odp</code>. Files in a proprietary format
+      commonly end in <code>doc</code>, <code>docx</code>, <code>xls</code> and
+      <code>xlsx</code>.
     </p>
 
 
-    <h2>List Of Offending Files</h2>
+    <h2>Results of crawls</h2>
 
     <p>
-      Here are CSVs of the latest runs of the RoboDoc crawler:
+      Here are the results of the latest runs of the RoboDoc crawler:
     </p>
 
     <dl>
+      <dt>
+        <a href="https://bitbucket.org/tlocke/rd_downloads/downloads/results_2018-02-27.ods">results_2018-02-27.ods</a>
+      </dt>
+      <dd>
+        The run was performed on 40,000 pages of
+        <a href="http://www.gov.uk/">http://www.gov.uk/</a>. It found 332
+        editable documents, only 14% of which are in an open format. Breaking
+        it down by year of publication gives the following:
+        <table>
+          <thead> 
+            <tr>
+              <th>2012</th>
+              <th>2013</th>
+              <th>2014</th>
+              <th>2015</th>
+              <th>2016</th>
+              <th>2017</th>
+              <th>2018</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0%</td>
+              <td>0%</td>
+              <td>2%</td>
+              <td>10%</td>
+              <td>12%</td>
+              <td>28%</td>
+              <td>12%</td>
+            </tr>
+          </tbody>
+        </table>
+      </dd>
       <dt>
         <a href="https://bitbucket.org/tlocke/rd_downloads/downloads/problems_2018-02-19.csv">problems_2018-02-19.csv</a>
       </dt>
@@ -97,7 +135,7 @@
     </dl>
 
     <p>
-      The CSVs file is licensed under a
+      The spreadsheets are licensed under a
       <a
          href="http://creativecommons.org/licenses/by/4.0/"
          >Creative Commons Attribution 4.0 International License</a>.

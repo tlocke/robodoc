@@ -3,20 +3,19 @@ from scrapy.http import HtmlResponse, Request
 
 
 def test_xslx():
-    url = 'http://www.example.com/'
+    url = 'http://www.example.com/spreadsheet.xlsx'
+    body = 'xml_spreadsheet'
 
-    body = """
-<!DOCTYPE html>
-<html lang="en">
-  <body>
-    <p><a href="spreadsheet.xlsx">Spreadsheet</a></p>
-  </body>
-</html>
-"""
+    request_headers = {
+        'Referer': 'http://www.example.com/'}
+    request = Request(url=url, headers=request_headers)
 
+    response_headers = {
+        'Last-Modified': b'Mon, 20 Nov 1995 19:12:08 -0500'}
     response = HtmlResponse(
-        url=url, request=Request(url=url), body=body, encoding='utf-8')
+        url=url, headers=response_headers, request=request, body=body,
+        encoding='utf-8')
 
     spider = FormatSpider()
     actual = next(spider.parse_item(response))['document_url']
-    assert actual == url + 'spreadsheet.xlsx'
+    assert actual == url

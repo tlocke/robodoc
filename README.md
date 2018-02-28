@@ -1,7 +1,7 @@
 # RoboDoc
 
 This is the software for the
-[RoboDoc project](https://tlocke.github.io/robodoc/). It's purpose is to crawl
+[RoboDoc project](https://tlocke.github.io/robodoc/). Its purpose is to crawl
 UK government websites and make a list of documents that have proprietary file
 formats.
 
