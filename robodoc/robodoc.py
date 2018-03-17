@@ -29,7 +29,7 @@ class FormatSpider(CrawlSpider):
     allowed_domains = ['www.gov.uk']
     start_urls = ['https://www.gov.uk/']
     custom_settings = {
-        'CLOSESPIDER_PAGECOUNT': 40000}
+        'CLOSESPIDER_PAGECOUNT': 80000}
     rules = (
         Rule(
             LinkExtractor(allow=(r'.*', ), deny_extensions=()),
