@@ -10,7 +10,7 @@ setup(
     url="https://github.com/tlocke/robodoc",
     license="MIT",
     install_requires=[
-        "scrapy==1.5.0",
+        "scrapy==2.5.1",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
